@@ -6,34 +6,15 @@
         <!-- a largura da página será a largura do dispositivo --> 
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
         <title>Profile Card</title>
-        <style>
-            body {
-                font-family: Arial, sans-serif;
-                background-color: #dccff4;
-    /* usa modelo FlexBox, conceito de caixa para posicionamento */
-                display: flex;
-                align-items: center; /* centraliza verticalmente*/
-                justify-content: center; /* centraliza horizontalmente */ 
-                height: 100vh; /* define a altura da tela - 100% */
-            }
-            .card {
-                background-color: white;
-                padding: 20px;
-                border-radius: 10px;
-                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-                text-align: center;
-            }
-            button:hover {
-                background-color: #f3a4b8;
-            }
-        </style>
+        <link rel="stylesheet" href="css/styles.css">
+        <script src="js/scripts.js"> </script>   
     </head>
     <body>
         <div class="card">
-            <img src="https://placehold.co/150" alt="Foto do perfil"/>
+            <img class="image" src="https://placehold.co/150" alt="Foto do perfil"/>
             <h2> Daniel Pires </h2>
             <p> Análise e Desenvolvimento de Sistemas </p>
-            <button> Avançar </button>
+            <button onclick="seguir()"> Seguir </button>
         </div>
     </body>
 </html>

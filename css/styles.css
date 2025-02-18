@@ -1,0 +1,34 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #dccff4;
+/* usa modelo FlexBox, conceito de caixa para posicionamento */
+    display: flex;
+    align-items: center; /* centraliza verticalmente*/
+    justify-content: center; /* centraliza horizontalmente */ 
+    height: 100vh; /* define a altura da tela - 100% */
+}
+.card {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+button {
+    background: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 15px; /* 10px é superior e inferior e 15px é esquerda e direita */
+    border-radius: 5px; /* borda */
+    cursor: pointer; /* ponteiro do mouse */
+}
+button:hover {
+    background-color: #f3a4b8;
+}
+
+.image {
+    border-radius: 50%; /* cantos arredondados de 50% */
+    width: 100px; /* largura da imagem */
+    height: 100px;/* altura da imagem */
+    margin-bottom: 10px; /* espaçamento externo abaixo */
+}
