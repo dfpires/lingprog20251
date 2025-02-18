@@ -32,3 +32,13 @@ button:hover {
     height: 100px;/* altura da imagem */
     margin-bottom: 10px; /* espaçamento externo abaixo */
 }
+.sidebar {
+    width: 200px;
+    height: 100vh; 
+    background: #333;
+    color: white;
+    padding: 20px;
+    position: fixed;
+    left: 0;
+    top: 0;
+}
