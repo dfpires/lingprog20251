@@ -4,5 +4,9 @@ form{
 }
 
 label {
-    padding-left: 0px;
+    display: flex;
+    margin-top: 10px;
+}
+input {
+    margin-top: 5px;
 }
