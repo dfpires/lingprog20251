@@ -22,3 +22,10 @@ function exe2(){
     let multiplicacao = nro1 * nro2 * nro3
     document.getElementById("multiplicacao").innerText = "O resultado é " + multiplicacao
 }
+
+function exe3(){
+    let nro1 = Number(document.getElementById("nro1").value)
+    let nro2 = Number(document.getElementById("nro2").value)
+    let divisao = nro1 / nro2
+    document.getElementById("divisao").innerText = "O resulta é " + divisao
+}
