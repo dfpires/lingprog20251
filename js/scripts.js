@@ -14,3 +14,11 @@ function exe1(){
     //alert("A subtração é " + sub)
     document.getElementById("sub").innerText = "O resultado é " + sub
 }
+
+function exe2(){
+    let nro1 = Number(document.getElementById("nro1").value)
+    let nro2 = Number(document.getElementById("nro2").value)
+    let nro3 = Number(document.getElementById("nro3").value)
+    let multiplicacao = nro1 * nro2 * nro3
+    document.getElementById("multiplicacao").innerText = "O resultado é " + multiplicacao
+}
