@@ -29,3 +29,11 @@ function exe3(){
     let divisao = nro1 / nro2
     document.getElementById("divisao").innerText = "O resulta é " + divisao
 }
+
+function exe4(){
+    let nro1 = Number(document.getElementById("nro1").value)
+    let nro2 = Number(document.getElementById("nro2").value)
+    // média ponderada
+    let mp = ((nro1 * 2) + (nro2 * 3)) / 5
+    document.getElementById("mp").innerText = "O resultado é " + mp
+}
