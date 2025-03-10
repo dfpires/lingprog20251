@@ -37,3 +37,9 @@ function exe4(){
     let mp = ((nro1 * 2) + (nro2 * 3)) / 5
     document.getElementById("mp").innerText = "O resultado é " + mp
 }
+function exe5(){
+    let preco = Number(document.getElementById("preco").value)
+    let desconto = (preco * 10) / 100
+    document.getElementById("desconto").innerText = "O novo preço é de " 
+    + (preco - desconto)
+}
