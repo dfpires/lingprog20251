@@ -5,8 +5,10 @@
         <meta charset="UTF-8"/>
         <!-- a largura da página será a largura do dispositivo --> 
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-        <title>Profile Card</title>
+        <title>Exercício 5</title>
+        <link rel="stylesheet" href="css/exercicio1.css">
         <link rel="stylesheet" href="css/styles.css">
+       
         <script src="js/scripts.js"> </script>   
     </head>
     <body>
@@ -28,10 +30,14 @@
         </div>
         <div class="container">
             <div class="card">
-                <img class="image" src="https://placehold.co/150" alt="Foto do perfil"/>
-                <h2> Daniel Pires </h2>
-                <p> Análise e Desenvolvimento de Sistemas </p>
-                <button onclick="seguir()"> Seguir </button>
+                <h1> Exercício 7 </h1>
+                <form>
+                    <label> Peso </label>
+                    <input type="number" id="peso"/>
+                    <button onclick="exe7()" type="button"> Calcular </button>
+                    <label id="novo1"> O resultado ao engordar: </label>
+                    <label id="novo2"> O resultado ao emagrecer: </label>
+                </form>
             </div>
         </div>
     </body>
