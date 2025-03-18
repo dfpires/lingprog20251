@@ -63,6 +63,31 @@ function exe4(){
     }
     else if (nro3 >= nro1 && nro3 >= nro2){
         document.getElementById("maior").innerHTML = "O maior é " + nro3
+    }   
+}
+function exe5(){
+    // recupera os dados do usuário
+    let nro1 = Number(document.getElementById("nro1").value)
+    let nro2 = Number(document.getElementById("nro2").value)
+    let selecao = Number(document.getElementById("selecao").value)
+    // utilização do escolha
+    switch (selecao){
+        case 1: document.getElementById("result").innerText = (nro1 + nro2) / 2
+                break
+        case 2: if (nro1 >= nro2){
+                    document.getElementById("result").innerText = nro1 - nro2
+                }
+                else {
+                    document.getElementById("result").innerText = nro2 - nro1
+                }
+                break
+        case 3: document.getElementById("result").innerText = nro1 * nro2
+                break
+        case 4: if (nro2 != 0){
+                    document.getElementById("result").innerText = nro1 / nro2
+                }
+                else {
+                    document.getElementById("result").innerText = "Divisão por zero"
+                }
     }
-    
 }
