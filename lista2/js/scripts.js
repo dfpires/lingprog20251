@@ -32,3 +32,37 @@ function exe2(){
         document.getElementById("media").innerHTML = "Problema com notas"
     }
 }
+
+function exe3(){
+    // recupera os dados do usuário
+    let nro1 = Number(document.getElementById("nro1").value)
+    let nro2 = Number(document.getElementById("nro2").value)
+    // calcula o menor e mostra o resultado
+    if (nro1 < nro2){
+        document.getElementById("menor").innerText = "O menor é " + nro1
+    }
+    else if (nro2 < nro1){
+        document.getElementById("menor").innerText = "O menor é " + nro2
+    }
+    else {
+        document.getElementById("menor").innerText = "Os dois são iguais"
+    }
+}
+
+function exe4(){
+    // recupera os dados do usuário
+    let nro1 = Number(document.getElementById("nro1").value)
+    let nro2 = Number(document.getElementById("nro2").value)
+    let nro3 = Number(document.getElementById("nro3").value)
+    // calcula o maior deles
+    if (nro1 >= nro2 && nro1 >= nro3){
+        document.getElementById("maior").innerHTML = "O maior é " + nro1
+    }
+    else if (nro2 >= nro1 && nro2 >= nro3){
+        document.getElementById("maior").innerHTML = "O maior é " + nro2
+    }
+    else if (nro3 >= nro1 && nro3 >= nro2){
+        document.getElementById("maior").innerHTML = "O maior é " + nro3
+    }
+    
+}
