@@ -91,3 +91,98 @@ function exe5(){
                 }
     }
 }
+function exe6(){
+    // recupera os dados do usuário
+    let nro1 = Number(document.getElementById("nro1").value)
+    let nro2 = Number(document.getElementById("nro2").value)
+    let selecao = Number(document.getElementById("selecao").value)
+    switch(selecao){
+        case 1: document.getElementById("result").innerText = "A potência é " +
+                Math.pow(nro1, nro2)
+                break
+        case 2: document.getElementById("result").innerHTML = "RQ do nro1 " + Math.sqrt(nro1).toFixed(2) 
+                    + " <br/> RQ do nro2 " + Math.sqrt(nro2).toFixed(2)
+                break
+        case 3: document.getElementById("result").innerHTML = "RC do nro1 " + Math.cbrt(nro1).toFixed(2) 
+                    + " <br/> RC do nro2 " + Math.cbrt(nro2).toFixed(2)
+                break
+    }
+}
+function exe7(){
+    // recupera os dados do usuário
+    let salario = Number(document.getElementById("salario").value)
+    // verifica valor do salário
+    if (salario < 0){
+        document.getElementById("novo").innerHTML = "Salário negativo"
+    }
+    else if (salario < 500){
+        document.getElementById("novo").innerHTML = "Novo salário " + (salario + salario*30/100)
+    }
+    else {
+        document.getElementById("novo").innerHTML = "Salário maior ou igual a 500, sem reajuste"
+    }
+}
+function exe8(){
+    // recupera os dados do usuário
+    let salario = Number(document.getElementById("salario").value) 
+    if (salario < 0){
+        document.getElementById("novo").innerHTML = "Salário negativo"
+    }
+    else if (salario <= 300){
+        // vamos usar template string
+        let novoSalario = (salario + salario*35/100)
+        document.getElementById("novo").innerHTML = `Novo salário ${novoSalario}` 
+    }
+    else {
+        // vamos usar template string
+        novoSalario = (salario + salario*15/100)
+        document.getElementById("novo").innerHTML = `Novo salário ${novoSalario}` 
+    }
+}
+function exe9(){
+    // recupera o valor do saldo
+    let saldo = Number(document.getElementById("saldo").value)
+    // calcula o crédito
+    let credito = 0 // inicializa com zero
+    if (saldo > 400){
+        credito = saldo * 30 / 100
+    }
+    else if ((saldo > 300) && (saldo <= 400)){
+        credito = saldo * 25 / 100
+    }
+    else if ((saldo > 200) && (saldo <= 300)){
+        credito = saldo * 20 / 100
+    }
+    else if ((saldo >= 0) && (saldo <= 200)){
+        credito = saldo * 10 / 100
+    }
+    else { // saldo negativo
+        document.getElementById("credito").innerHTML = "Saldo não pode ser negativo"
+        return // saiu da função
+    }
+    document.getElementById("credito").innerHTML = `Saldo ${saldo} e crédito ${credito}`
+}
+function exe10(){
+    // recupera o custo da fábrica
+    let custo = Number(document.getElementById("custo").value)
+    let distribuidor = 0
+    let imposto = 0
+    if (custo >= 0 && custo < 12000){
+        distribuidor = custo * 5 /100
+        imposto = 0
+    }
+    else if (custo >= 12000 && custo <= 25000){
+        distribuidor = custo * 10 / 100
+        imposto = custo * 15 / 100
+    }
+    else if (custo > 25000) { // custo é negativo
+        distribuidor = custo * 15 / 100
+        imposto = custo * 20 / 100
+    }
+    else {
+        document.getElementById("consumidor").innerHTML = "Custo negativo"
+        return // sai da função
+    }
+    let consumidor = custo + distribuidor + imposto
+    document.getElementById("consumidor").innerHTML = `Custo da fábrica ${custo} <br/> Distribuidor ${distribuidor} <br/> Imposto ${imposto} <br/> Valor ao consumidor ${consumidor}`
+} // fecha função
