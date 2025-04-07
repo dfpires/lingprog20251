@@ -36,3 +36,34 @@ function exe2(){
     }
     document.getElementById("tabela").innerHTML = saida
 }
+function exe3(){
+    let faixa1 = 0, faixa2 = 0, faixa3 = 0, faixa4 = 0, faixa5 = 0
+    let idade
+    // estrutura de repetição for
+    // let i = 1 será executado uma única vez, logo no início
+    // i <= 8 será executado toda vez, antes de entrar no loop
+    // i++ será executado toda vez, antes de ir para próxima iteração 
+    for (let i = 1; i <= 8; i++){
+        idade = Number(prompt(`Informe a idade ${i}`))
+        if (idade >= 0 && idade <= 15){
+            faixa1++
+        }
+        else if (idade > 15 && idade <= 30){
+            faixa2++
+        }
+        else if (idade > 30 && idade <= 45){
+            faixa3++
+        }
+        else if (idade > 45 && idade <= 60){
+            faixa4++
+        }
+        else if (idade > 60){
+            faixa5++
+        }
+        else {
+            alert(`Idade negativa`)
+        }
+    }
+    document.getElementById("resultado").innerHTML = 
+     `F1: ${faixa1} <br/>F2: ${faixa2} <br/>F3: ${faixa3} <br/>F4: ${faixa4} <br/>F5: ${faixa5} <br/> %F1: ${faixa1/8*100}% <br/> %F5: ${faixa5/8*100}%`
+}
