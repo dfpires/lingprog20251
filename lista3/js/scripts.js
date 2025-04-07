@@ -67,3 +67,23 @@ function exe3(){
     document.getElementById("resultado").innerHTML = 
      `F1: ${faixa1} <br/>F2: ${faixa2} <br/>F3: ${faixa3} <br/>F4: ${faixa4} <br/>F5: ${faixa5} <br/> %F1: ${faixa1/8*100}% <br/> %F5: ${faixa5/8*100}%`
 }
+function exe4(){
+    // recupera o número fornecido pelo usuário
+    let numero = Number(document.getElementById("numero").value)
+    let resultado = ""
+    // estrturura de repetiçao para calcula a tabuada do numero
+    for(let i = 0; i <= 10; i++){
+        resultado += `${numero} * ${i} = ${numero * i} <br/>`
+    }
+    document.getElementById("resultado").innerHTML = resultado
+}
+function exe5(){
+    let resultado = ""
+    for(let numero = 1; numero <= 10; numero++){
+        resultado += `Tabuada do ${numero} <br/>`
+        for(let i = 0; i <= 10;i++){
+            resultado += `${numero} * ${i} = ${numero*i} <br/>`
+        }
+    }
+    document.getElementById("resultado2").innerHTML = resultado
+}
