@@ -104,3 +104,25 @@ function exe6(){
     }
     document.getElementById("resultado").innerHTML = `Total à vista ${totalVista} Total à prazo ${totalPrazo}, total geral ${totalPrazo + totalVista} e valor da primeira parcela ${totalPrazo/3}`
 }
+function exe7(){
+    let idade, altura, peso, idade50 = 0, idade10e20 = 0, somaAltura = 0, peso40 = 0
+    for(let i=1;i<=5;i++){
+        do {
+            idade = Number(prompt(`Informe a idade`))
+        }
+        while (idade < 0)
+        altura = Number(prompt(`Informe a altura`))
+        peso = Number(prompt(`Informe o peso`))
+        if (idade > 50){ // item 1
+            idade50++
+        }
+        if (idade >= 10 && idade <= 20){ // item 2
+            idade10e20++ // conta as pessoas com idade entre 10 e 20
+            somaAltura += altura
+        }
+        if (peso < 40){ // item 3
+            peso40++
+        }
+    }
+    document.getElementById("resultado").innerHTML = `<br/> Item 1 ${idade50} <br/> Item 2 ${somaAltura/idade10e20} <br/> Item 3 ${peso40}`
+}
