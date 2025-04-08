@@ -87,3 +87,20 @@ function exe5(){
     }
     document.getElementById("resultado2").innerHTML = resultado
 }
+function exe6(){
+    let codigo, valor, totalVista = 0, totalPrazo = 0
+    for(let i=1; i <= 5; i++){
+        do { // vai permanecer no do ... while enquanto o usuário não digitar V ou P
+            codigo = prompt(`Digite V (à vista) ou P (à prazo)`).toUpperCase()
+        }
+        while (codigo != 'V' && codigo != 'P')
+        valor = Number(prompt(`Digite o valor da transação`))
+        if (codigo == 'V'){
+            totalVista += valor
+        }
+        else {
+            totalPrazo += valor
+        }
+    }
+    document.getElementById("resultado").innerHTML = `Total à vista ${totalVista} Total à prazo ${totalPrazo}, total geral ${totalPrazo + totalVista} e valor da primeira parcela ${totalPrazo/3}`
+}
