@@ -161,3 +161,37 @@ function exe8(){
     }
     document.getElementById("resultado").innerHTML = `Item 1 ${idade50Peso60} Item 2 ${soma/qtdeAltura150} Item 3 ${qtdeAzuis} Item 4 ${qtdeRuivo}`
 }
+
+function prova(){
+    let idade, altura, peso, raca, pelos
+    let item1 = 0, item3 = 0, item4 = 0
+    let somaIdade = 0, contaAltura = 0
+    for(let i = 1; i<=10; i++){
+        idade = Number(prompt(`Informe a idade (em anos)`))
+        altura = Number(prompt(`Informe a altura (em metros)`))
+        peso = Number(prompt(`Informe o peso (em kilos)`))
+        do {
+            raca = prompt(`Informe a raça V – vira lata, L - Labrador, P - Poodle`).toUpperCase()
+        }
+        while (raca != 'V' && raca != 'L' && raca != 'P') 
+        do {
+            pelos = prompt(`Informe cor do pêlo P - preto, C - castanho, L - loiro, B - branco`)
+        }
+        while (pelos != 'P' && pelos != 'C' && pelos != 'L' && pelos != 'B')
+        
+        if (idade > 10 && peso < 10){
+            item1++
+        }
+        if (raca == 'L'){
+            item3++
+        }
+        if (pelos == 'B' && raca != 'V'){
+            item4++
+        }
+        if (altura < 0.5){
+            somaIdade += idade
+            contaAltura++
+        }
+    }
+    document.getElementById("prova").innerHTML = `Item 1 ${item1} Item 2 ${somaIdade/contaAltura} Item 3 ${item3} e Item 4 ${item4}`
+}
