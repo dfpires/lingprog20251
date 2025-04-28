@@ -1,0 +1,21 @@
+form{
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    display: flex;
+    margin-top: 10px;
+}
+
+input {
+    margin-top: 5px;
+}
+
+button {
+    margin-top: 10px;
+}
+
+table {
+    margin-top: 10px;
+}
