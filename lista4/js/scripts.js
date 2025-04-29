@@ -40,3 +40,36 @@ function exe2(){
     }
     alert(`Múltiplos de 2 ${multiplos2} Múltiplos de 3 ${multiplos3} e Múltiplos de 2 e de 3 ${multiplos2e3}`)
 }
+function exe3(){
+    // cadastra código e qtde em estoque
+    let codigos = [], estoque = [] // declara os vetores
+    for(let i=0; i<3;i++){
+        codigos.push(prompt(`Informe o código do produto`))
+        estoque.push(Number(prompt(`Informe a qtde em estoque`)))
+    }
+    // comprando ...
+    let cliente = Number(prompt(`Informe código do cliente`))
+    do {
+        let codigo = prompt(`Informe código do produdo para compra`)
+        let qtde = Number(prompt(`Informe a qtde do produto para compra`))
+        // procura pra ver se o produto existe
+        let posicao = codigos.indexOf(codigo)
+        if (posicao == -1){ // produto não existe
+            alert(`Código ${codigo} inexistente`)
+        }
+        else { // produto existe
+            // tem em estoque suficiente
+            if (estoque[posicao] >= qtde){
+                // atualiza o estoque
+                estoque[posicao] = estoque[posicao] - qtde
+                alert(`Pedido atendido. Obrigado e volte sempre`)
+            }
+            else { 
+                alert(`Não temos estoque suficiente desta mercadoria`)
+            }
+        }
+        cliente = Number(prompt(`Informe código do novo cliente. Digite 0 para encerrar`))
+    } // fecha o do
+    while (cliente != 0)
+    alert(`${codigos} ${estoque}`)
+}
