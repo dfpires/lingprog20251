@@ -113,10 +113,82 @@ function exe5(){
     alert(`Alunos que fazem Lógica e Linguagem ${interseccao}`)
 }
 function exe6(){
-    let vendas = [], percentuais = [], nomes = []
-    for(let i=0;i<5;i++){
+    let vendas = [], percentuais = [], nomes = [], comissao = []
+    // entrada de dados
+    for(let i=0;i<3;i++){
         nomes.push(prompt(`Informe nome do ${i+1}o vendedor`))
         vendas.push(Number(prompt(`Informe total vendido pelo ${i+1}o vendedor`)))
         percentuais.push(Number(prompt(`Informe percentual de vendas do ${i+1}o vendedor`)))
+        // calcula a comissão
+        comissao.push((vendas[i] * percentuais[i]) / 100)
+    }
+    // relação dos vendedores e os valores a receber
+    let relatorio = ''
+    for(let i=0;i<3;i++){
+        relatorio += `\nVendedor: ${nomes[i]} vai receber ${comissao[i]}`
+    }
+    alert(relatorio)
+    // total das vendas de todos os vendedores
+    let somaVendas = 0
+    for(let i=0;i<3;i++){
+        somaVendas = somaVendas + vendas[i]
+    }
+    alert(`Total de vendas ${somaVendas.toFixed(2)}`)
+    // calcula o maior e menor valor de comissão
+    let maior = comissao[0] // primeiro é o maior
+    let menor = comissao[0] // primeiro é o menor
+    for(let i=1;i<3;i++){
+        if (comissao[i] > maior){
+            maior = comissao[i]
+        }
+        if (comissao[i] < menor){
+            menor = comissao[i]
+        }
+    }
+    let iMaior = comissao.indexOf(maior) // posição do maior na comissão
+    alert(`${nomes[iMaior]} vai receber maior comissão de ${maior}`)
+    let iMenor = comissao.indexOf(menor) // posição do menor na comissão
+    alert(`${nomes[iMenor]} vai receber menor comissão de ${menor}`)
+}
+function exe7(){
+    let vetor = []
+    for(let i=0;i<10;i++){
+        vetor.push(Number(prompt(`Informe o número ${i}o.`)))
+    }
+    // conta os negativos e soma os positivos
+    let conta = 0
+    let soma = 0
+    for(let i=0;i<10;i++){
+        if (vetor[i] < 0){
+            conta++
+        }
+        else {
+            soma += vetor[i]
+        }
+    }
+    alert(`Contagem de negativos ${conta} e soma dos positivos ${soma}`)
+}
+function exe8(){
+    let nomes = [], medias = []
+    for(let i=0;i<7;i++){
+        nomes.push(prompt(`Informe nome do aluno ${i+1}`))
+        medias.push(Number(prompt(`Informe média do aluno ${i+1}`)))
+    }
+    // calcular a maior média
+    let maior = medias[0]
+    for(let i=1;i<7;i++){
+        if (medias[i] > maior){
+            maior = medias[i]
+        }
+    }
+    // nome do aluno com a maior média
+    let pos = medias.indexOf(maior)
+    alert(`Nome do aluno com maior média ${maior} é ${nomes[pos]}`)
+    // calcular a nota necessária no exame final
+    for(let i=0;i<6;i++){ // percorre o vetor
+        if (medias[i] < 7){ // ficou para exame final
+            // nota necessária sabendo que média deve ser mínimo 5
+            alert(`${nomes[i]} precisa tirar ${10-medias[i]}`)
+        }
     }
 }
