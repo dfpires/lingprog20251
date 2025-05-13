@@ -192,3 +192,29 @@ function exe8(){
         }
     }
 }
+function exe9(){
+    let nomes = [], codigos = [], precos = []
+    for(let i=0;i<10;i++){
+        nomes.push(prompt(`Informe nome do produto ${i+1}`))
+        codigos.push(Number(prompt(`Informe código do produto ${i+1}`)))
+        precos.push(Number(prompt(`Informe preço do produto ${i+1}`)))
+        // let x = (int) (Math.random() * 10)
+    }
+    // gerar o relatório com os novos preços
+    for(let i=0;i<10;i++){
+        let novo
+        if (codigos[i] % 2 == 0 && precos[i] > 1000){
+            novo = precos[i] + precos[i] * 20/100
+        }
+        else if (codigos[i] % 2 == 0){
+            novo = precos[i] + precos[i] * 15/100
+        }
+        else if (precos[i] > 100){
+            novo = precos[i] + precos[i] * 10/100
+        }
+        else {
+            novo = precos[i]
+        }
+        alert(`${nomes[i]} - ${codigos[i]} - ${precos[i]} - ${novo}`)
+    }
+}
