@@ -9,8 +9,8 @@ function entrada(mat){
 }
 function calculaSomaDiagonalPrincipal(mat){
     let soma = 0
-    for(let i=0;i<3;i++){
-         for(let j=0;j<3;j++){
+    for(let i=0;i<3;i++){ // para cada linha
+         for(let j=0;j<3;j++){ // para cada coluna
             if (i == j){
                 soma += mat[i][j]
             }

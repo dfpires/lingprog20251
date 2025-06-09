@@ -30,7 +30,7 @@ function exibeMatriz(mat){
 function exe1(){
     let mat = []
     entrada(mat)
-    alert(`A soma dos número entre 15 e 20 é ${somaEntre15e20(mat)}`)
+    alert(`A qtde de elementos entre 15 e 20 é ${somaEntre15e20(mat)}`)
     exibeMatriz(mat)
 }
 exe1()
